@@ -112,7 +112,7 @@ class App extends Component {
     .then(response => this.displayFaceBox(this.calculateFaceLocation(response)))
     .catch(err => console.log(err));
 
-    fetch('http://localhost:3000/image', {
+    fetch('https://backedsmartbrain.onrender.com/image', {
           method: 'PUT',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({ id: this.state.user.id })
@@ -124,6 +124,8 @@ class App extends Component {
         .catch(console.log)
     
   }
+
+  
 
   onRouteChange = (route) => {
     if(route === 'signout') {
